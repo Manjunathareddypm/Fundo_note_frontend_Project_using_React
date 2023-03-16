@@ -1,0 +1,31 @@
+.takenoteone{
+    border: 1px solid black;
+    height: 8vh;
+    width: 40vw;
+    display: flex;
+    margin: auto ;
+    margin-top: 50px;
+    flex-direction: row;
+}
+.takenote1{
+    border: 1px solid black;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+}
+.takenote11{
+    height: 90%;
+    width: 100%;   
+}
+.takenote2{
+    border: 1px solid black;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
