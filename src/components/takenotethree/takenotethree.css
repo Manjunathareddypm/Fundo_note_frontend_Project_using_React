@@ -1,13 +1,14 @@
-.takenotetwo{
+.takenotethree{
     border: 1px solid black;
     height: 20vh;
-    width: 40vw;
+    width: 20vw;
     display: flex;
-    margin: auto ;
+    margin-right: 10% ;
+    margin-left: 20%;
     margin-top: 50px;
     flex-direction: column;
 }
-.takenotetwo1{
+.takenotethree1{
     /* border: 1px solid black; */
     height: 30%;
     width: 100%;
@@ -15,7 +16,7 @@
     flex-direction: row;
     align-items: center;
 }
-.takenotetwo11{
+.takenotethree11{
     /* border: 1px solid black; */
     height: 100%;
     width: 90%;
@@ -23,13 +24,13 @@
     justify-content: center;
     align-items: center;    
 }
-.takenotetwo111{  
+.takenotethree111{  
     outline: none;
     border: none; 
     height: 90%;
     width: 100%;
 }
-.takenotetwo12{
+.takenotethree12{
     /* border: 1px solid black; */
     height: 100%;
     width: 10%;
@@ -39,21 +40,21 @@
     
 }
 
-.takenotetwo2{
+.takenotethree2{
     /* border: 1px solid black; */
     height: 40%;
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.takenotetwo21{
+.takenotethree21{
     outline: none;
     border: none;
     height: 95%;
     width: 100%;   
 }
 
-.takenotetwo3{
+.takenotethree3{
     /* border: 1px solid black; */
     height: 30%;
     width: 100%;
@@ -61,16 +62,17 @@
     flex-direction: row;
     justify-content: space-around;
 }
-.takenotetwo31{
+.takenotethree31{
     /* border: 1px solid black; */
     height: 95%;
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+   
 }
-.takenotetwo32{
+.takenotethree32{
     /* border: 1px solid black; */
     height: 95%;
     width: 20%;

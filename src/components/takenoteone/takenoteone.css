@@ -13,8 +13,12 @@
     width: 80%;
     display: flex;
     justify-content: flex-start;
+    outline: none;
+    border: none;
 }
 .takenote11{
+    outline: none;
+    border: none;
     height: 90%;
     width: 100%;   
 }
@@ -26,6 +30,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    outline: none;
+    border: none;
 }
 
 
