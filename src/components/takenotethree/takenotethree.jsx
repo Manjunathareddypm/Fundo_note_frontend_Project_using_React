@@ -9,26 +9,32 @@ import ArchiveIcon from '@mui/icons-material/Archive';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import UndoIcon from '@mui/icons-material/Undo';
 import RedoIcon from '@mui/icons-material/Redo';
+import ColorPopper from '../colorpopper/Colorpopper';
+import { updateNote } from '../../Services/dataservices';
 
+ function TakeNoteThree({noteObj}) {
 
- function TakeNoteThree() {
+ const updateArchive = async() => {
+  noteObj.archive = true
+  let response = await updateNote(noteObj)
+  console.log(response)
+
+ }
   return (
-    <div className='takenotethree' >
+    <div className='takenotethree' style={{backgroundColor:noteObj.color}}>
     <div className='takenotethree1'>
-            <div className='takenotethree11'><input className='takenotethree111' type="text" placeholder="title" /></div>
+            <div className='takenotethree11'>{noteObj.title}</div>
             <div className='takenotethree12'><PushPinOutlinedIcon /></div>
     </div>
-    <div className='takenotethree2'><input className='takenotethree21' type="text" placeholder="Take a note..." /></div>
+    <div className='takenotethree2'>{noteObj.description}</div>
     <div className='takenotethree3'>
             <div className='takenotethree31'>
                 <div><AddAlertOutlinedIcon /></div>
                 <div><PersonAddAlt1Icon /></div>
-                <div><ColorLensIcon /></div>
+                <div><ColorPopper action ="edit" noteObj={noteObj}/></div>
                 <div><InsertPhotoIcon /></div>
-                <div><ArchiveIcon /></div>
+                <div><ArchiveIcon  onClick={updateArchive}/></div>
                 <div><MoreVertIcon /></div>
-                {/* <div><UndoIcon /></div>
-                <div><RedoIcon /></div> */}
             </div>
             {/* <div className='takenotethree32'> close</div> */}
         </div>

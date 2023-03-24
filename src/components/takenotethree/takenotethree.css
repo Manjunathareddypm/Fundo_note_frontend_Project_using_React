@@ -1,11 +1,9 @@
 .takenotethree{
     border: 1px solid black;
-    height: 20vh;
-    width: 20vw;
+  height:200px;
+    width: 22% ;
+    margin: 10px;
     display: flex;
-    margin-right: 10% ;
-    margin-left: 20%;
-    margin-top: 50px;
     flex-direction: column;
 }
 .takenotethree1{

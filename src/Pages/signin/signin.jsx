@@ -59,6 +59,7 @@ const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
       if (emailTest === true && passwordTest === true) {
         let response = await siginin(signinObj);
         console.log(response);
+        localStorage.setItem('token',response.data.data.token)
       }
     }
    
