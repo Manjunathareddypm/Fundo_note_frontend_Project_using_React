@@ -3,13 +3,15 @@ import './signup.css'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { signup } from '../../Services/userservices';
+import { Outlet, Navigate } from "react-router-dom";
+import Link from '@mui/material/Link';
 
 const firstNameRegex = /^[A-Z]{1,1}[a-z]{3,30}$/;
 const lastNameRegex = /^[a-z[A-Z]{3,30}$/;
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 const passwordRegex = /^[a-z]{1,3}[A-Z]{1,1}[0-9]{1,4}$/;
 
-function SignUp() {
+function Signup() {
   const [signupObj, setSigupObj] = React.useState({firstName:"", lastName:"", email:"", password:""})
   const [errorObj, setErrorObj] = React.useState({
     firstNameError:false,
@@ -98,6 +100,8 @@ function SignUp() {
   if (firstnameTest === true && lastnameTest === true && emailTest === true && passwordTest === true) {
     let response = await signup(signupObj);
     console.log(response);
+    console.log('User Signed Up Successfully...');
+    return <Navigate to="/" />;
   }
 }
   return (
@@ -157,7 +161,7 @@ function SignUp() {
                 <div className='c1'><TextField id="outlined-basic" label="Confirm" variant="outlined" /></div>
             </div>
             <div className='main16'>
-                <div>Sign in instead</div>
+                <Link href="/">Sign in instead</Link>
                 <div>
                 <Button onClick={submit} variant="contained">Next</Button>
                 </div>
@@ -175,4 +179,4 @@ function SignUp() {
   )
 }
 
-export default SignUp;
+export default Signup;

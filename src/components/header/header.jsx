@@ -7,13 +7,28 @@ import ViewStreamIcon from '@mui/icons-material/ViewStream';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AppsIcon from '@mui/icons-material/Apps';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Button from '@mui/material/Button';
+import { Link, redirect } from "react-router-dom";
+import Grid from '@mui/material/Grid';
 
-  function Header() {
+
+  function Header(props) {
+    const icons = () => {
+        props.listenToHeader()
+    }
+
+    function deleteToken() {
+        localStorage.removeItem("token");
+        return redirect("/");
+
+        // return <Navigate to="/" />;
+      }
   return (
+    
     <div className='header'>
         <div className='fbox'>
             <div className='f1box'>
-            <MenuIcon />
+            <MenuIcon  onClick={icons}/>
             </div>
             <div className='f2box'>
                 <div className='f21box'>
@@ -39,10 +54,13 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
             </div>
             <div className='t2box'>
             <div className='t21box'><AppsIcon /></div>
-                <div className='t22box'><AccountCircleIcon /></div>
+                <div className='t22box'>
+                <Link variant="outlined" onClick={deleteToken} href='/'>
+                <AccountCircleIcon /></Link>
+                </div>
             </div>
         </div>
-    </div>
+         </div>
   )
 }
 

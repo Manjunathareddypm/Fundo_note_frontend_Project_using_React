@@ -23,3 +23,19 @@ export const updateNote = async(obj) =>{
     let response1 = await axios.put(url+`/notes/${obj._id}`,obj,headerConfig)
     return response1
 }
+
+export const updateNoteArchive = async(obj) =>{
+    let response1 = await axios.put(url+`/notes/${obj._id}/archive`,obj,headerConfig)
+    return response1
+}
+
+export const updateNotesTrash = async(obj) =>{
+    let response1 = await axios.put(url+`/notes/${obj._id}/trash`,obj,headerConfig)
+    return response1
+}
+
+export const updateNotesColor = async(id,obj) =>{
+    let response1 = await axios.put(url+`/notes/${id}`,obj,headerConfig)
+    return response1
+}
+

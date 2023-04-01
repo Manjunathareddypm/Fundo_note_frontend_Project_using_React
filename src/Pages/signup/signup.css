@@ -1,17 +1,16 @@
 .main{
     border: 1px solid black;
     height: 70vh;
-    width: 40vw;
-    margin-top: 120px;
-    margin-left: auto;
-    margin-right: auto; 
+    width: 30vw;
+   margin: auto;
+   margin-top: 90px;
     display: flex;
     flex-direction: row; 
 }
 .main1{
     /* border: 1px solid black; */
     height: 100%;
-    width: 60%; 
+    width: 65%; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,17 +19,19 @@
 
 .main11{
     /* border: 1px solid black; */
-    height: 10%;
-    width: 80%;
-    margin-top: 20px;    
+    display: flex;
+  height: 10%;
+  width: 85%;
+  flex-direction: column;
+     
 }
 .gimg{
     height: 100%;
-    width: 30%;
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
-    margin-right: 50px;
+    width: 40%;
+    margin-top: 30px;
+    
+    
+    /* margin-right: 50px; */
 }
 .main12{
     /* border: 1px solid black; */
@@ -39,7 +40,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     margin-top: 10px;
 
      
@@ -52,17 +53,19 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 30px;
+    
 
 }
 .f1{
     /* border: 1px solid black; */
     height: 100%;
-    width: 45%;
+    width: 48%;
+    
 }
 .l1{
     /* border: 1px solid black; */
     height: 100%;
-    width: 45%;
+    width: 48%;
 }
 .main14{
     /* border: 1px solid black; */
@@ -72,11 +75,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center; 
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
+    
 }
 .fu{
     height: 100%;
     width: 100%;
+    margin-bottom: 20px;
+    
 }
 .main15{
     /* border: 1px solid black; */
@@ -91,12 +97,12 @@
 .p1{
     /* border: 1px solid black; */
     height: 100%;
-    width: 45%;
+    width: 48%;
 }
 .c1{
     /* border: 1px solid black; */
     height: 100%;
-    width: 45%;
+    width: 48%;
 }
 .main16{
     /* border: 1px solid black; */
@@ -105,14 +111,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
     margin-bottom: 20px;    
 }
 
 .main2{
     /* border: 1px solid black; */
     height: 100%;
-    width: 40%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -134,12 +140,166 @@
 }
 .main22{
     /* border: 1px solid black; */
-    height: 10%;
-    width: 100%;
+    height: 20%;
+    width: 90%;
     display: flex;
+    margin-left: 10px;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width:360px){
+    .main{
+        border: 1px solid black;
+        height: 80vh;
+        width: 80vw;
+        flex-wrap: nowrap;
+        /* margin-top: 120px; */
+        /* margin-left: auto;
+        margin-right: auto; */
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row; 
+    }
+    .main2{
+        display: none;
+    }
+    .main13{
+        /* border: 1px solid black; */
+        height: 10%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* margin-bottom: 30px; */
+    
+    }
+
+    .main15{
+        /* border: 1px solid black; */
+        height: 10%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        margin-top: 30px;
+        margin-bottom: 60px;  
+    }
+
+    .main16{
+        /* border: 1px solid black; */
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; 
+        /* margin-bottom: 50px;     */
+    }
+    .p1{
+        /* border: 1px solid black; */
+        height: 100%;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .c1{
+        /* border: 1px solid black; */
+        height: 100%;
+        width: 100%;
+    }
+    .f1{
+        /* border: 1px solid black; */
+        height: 100%;
+        width: 100%;
+        margin-bottom: 10px;
+        
+    }
+    .l1{
+        /* border: 1px solid black; */
+        height: 100%;
+        width: 100%;
+    }
+    .main14{
+        /* border: 1px solid black; */
+        height: 10%;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; 
+        margin-bottom: 20px;
+        margin-top: 80px;   
+       
+    }
+    .fu{
+        height: 100%;
+        width: fit-content;   
+    }
+
+    .main1{
+        /* border: 1px solid black; */
+        height: 100%;
+        width: 90%; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .main11{
+        /* border: 1px solid black; */
+        width: 85%;
+        height: 10%;
+        /* margin-top: -30px; */
+        align-items: flex-start;   
+    }
+    
+    
+
+   
+    /* .main1{
+        display: flex;
+        flex-direction: column;
+        margin: 15%;
+        flex-wrap: nowrap;
+    }
+    .main11{
+        width: 1%;
+        height: 5%;
+    }
+    .main12{
+        font-size: 0.8em;
+    }
+    .main13{
+        display: flex;
+        flex-direction: column;
+        margin: 1%;
+        flex-wrap: nowrap; 
+    }
+    .main14{
+        margin: 1%;
+    }
+    .link1{
+        display: none;
+    }
+    .main15{
+        display: flex;
+        flex-direction: column;
+        margin: 1%;
+        flex-wrap: nowrap; 
+    }
+    .fourth-label{
+        margin: 1%;
+    }
+    .main16{
+        display: flex;
+        flex-direction: column;
+        margin: 1%;
+        flex-wrap: nowrap;
+    }
+    .main16{
+        margin: 15%;
+    }*/
+} 
 
 

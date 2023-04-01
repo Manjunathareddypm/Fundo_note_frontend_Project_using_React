@@ -1,14 +1,18 @@
 .takenoteone{
-    border: 1px solid black;
-    height: 8vh;
-    width: 40vw;
+    /* border: 1px solid black; */
+    height: 20vh;
+    width: 60vw;
     display: flex;
     margin: auto ;
-    margin-top: 50px;
+    margin-top: 10px;
+    /* margin-bottom: 50px; */
     flex-direction: row;
+    border-radius: 5px;
+    
+    
 }
 .takenote1{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 100%;
     width: 80%;
     display: flex;
@@ -19,19 +23,32 @@
 .takenote11{
     outline: none;
     border: none;
+    margin-top: 2px;
+    margin-left: 2px;
     height: 90%;
     width: 100%;   
 }
 .takenote2{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 100%;
-    width: 20%;
+    width: 30%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    outline: none;
-    border: none;
+    /* outline: none;
+    border: none; */
+    
+    margin-right: -100px;
 }
+
+.icon {
+    width: 33.33%;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 
 

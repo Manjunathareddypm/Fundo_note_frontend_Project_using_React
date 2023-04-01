@@ -1,10 +1,10 @@
 .takenotetwo{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 20vh;
     width: 40vw;
     display: flex;
     margin: auto ;
-    margin-top: 50px;
+    margin-bottom: 50px;
     flex-direction: column;
 }
 .takenotetwo1{
@@ -21,7 +21,9 @@
     width: 90%;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center; 
+    margin-bottom: 20px; 
+    margin-top: 20px; 
 }
 .takenotetwo111{  
     outline: none;
@@ -45,6 +47,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    
 }
 .takenotetwo21{
     outline: none;

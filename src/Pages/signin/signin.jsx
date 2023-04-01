@@ -1,8 +1,11 @@
 import React from "react";
 import './signin.css';
+import Link from '@mui/material/Link';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { siginin } from "../../Services/userservices";
+import { redirect, useNavigate } from "react-router-dom";
+import { Outlet, Navigate } from "react-router-dom";
 
 
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
@@ -16,9 +19,9 @@ const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
         passwordError: false,
         passwordHelper: "",
       });
-   
+      const navigate = useNavigate();
+      
     const takeEmail = (event) => {
-        // setn((prev)=>prev+1)
         setSiginObj((prevState) => ({ ...prevState, email: event.target.value }));
       };
       const takePassword = (e) => {
@@ -57,10 +60,18 @@ const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
             }));
       }
       if (emailTest === true && passwordTest === true) {
+        console.log("hi");
         let response = await siginin(signinObj);
         console.log(response);
         localStorage.setItem('token',response.data.data.token)
+        //  redirect("/dashboard");
+        //  return <Navigate to= "/dashboard" />;
+        navigate('/dashboard')
       }
+    }
+
+    function displaySignUp(){
+      return redirect("/SignUp");
     }
    
     return(
@@ -104,11 +115,11 @@ const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
             <div className="texts">Not your computer? Use Guest mode to sign in privately.</div>
             <div className="cn">
                 <div className="ca">
-                    <a href="https://accounts.google.com/signup/v2/webcreateaccount?biz=false&cc=IN&continue=https%3A%2F%2Fmyaccount
-                    .google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dgo-to-account-button&dsh=S-435941888%3A1678800042859784&flowEntry=SignUp&flowName=GlifWebSignIn&service=accountsettings">Create account</a>
+                <Link href="/SignUp" onClick={displaySignUp}>Create account</Link>
                 </div>
-                <div>
-                <Button onClick={submit} variant="contained">Next</Button>
+                <div className="button">
+                <Button onClick={submit} variant="contained">
+                 Next</Button>
                 </div>
             </div>
         </div>
